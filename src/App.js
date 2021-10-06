@@ -26,7 +26,7 @@ const App = () => {
 
 const Wrapper = styled.main`
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   background-color: hsl(133, 30%, 41%);
   padding: 16px;
   color: hsl(133, 30%, 41%);
