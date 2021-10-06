@@ -13,7 +13,7 @@ export const About = () => {
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac urna et tellus bibendum sodales. Nullam vitae odio urna. Pellentesque tristique dignissim arcu a eleifend. Aliquam erat volutpat. Suspendisse potenti. Quisque vitae tortor ac felis posuere porta.</p>
       <h2>Skills</h2>
       <SkillList>
-        {skills.map(skill => <ListItem><Dash>-</Dash>{skill}</ListItem>)}
+        {skills.map(skill => <ListItem><Dash></Dash>{skill}</ListItem>)}
       </SkillList>
     </Wrapper>
   )
@@ -45,10 +45,17 @@ const SkillList = styled.ul`
   justify-content: space-between;
 `
 const ListItem = styled.li`
-  display: block;
+  display: flex;
   width: 100px;
+  gap: 4px;
 `
 
 const Dash = styled.span`
   color: hsl(353, 45%, 37%);
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid hsl(353, 45%, 37%);
+  align-self: center;
 `
