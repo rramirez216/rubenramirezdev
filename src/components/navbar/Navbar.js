@@ -24,6 +24,7 @@ const Nav = styled.nav`
   justify-content: center;
   gap: 8px;
   font-size: 1.5rem;
+  margin-bottom: 100px;
 `
 
 const LinkWrapper = styled.div`

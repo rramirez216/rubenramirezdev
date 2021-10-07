@@ -11,13 +11,13 @@ const App = () => {
   return (
     <Wrapper>
       <Navbar />
-      <InnerWrapper>
+      {/* <InnerWrapper> */}
         <Switch>
           <Route path='/contact' render={() => <Contact />}/>
           <Route path='/projects' render={() => <Projects />}/>
           <Route exact path='/' render={() => <About />}/>
         </Switch>
-      </InnerWrapper>
+      {/* </InnerWrapper> */}
       
       <GlobalStyles />
     </Wrapper>
@@ -26,19 +26,20 @@ const App = () => {
 
 const Wrapper = styled.main`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: hsl(133, 30%, 41%);
-  padding: 16px;
+  padding: 16px 8px;
   color: hsl(133, 30%, 41%);
   display: flex;
   flex-flow: column;
+  overflow-y: scroll;
 `
 
-const InnerWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-`
+// const InnerWrapper = styled.div`
+//   /* width: 100%; */
+//   /* height: 100%; */
+//   display: flex;
+//   align-items: center;
+// `
 
 export default App;
