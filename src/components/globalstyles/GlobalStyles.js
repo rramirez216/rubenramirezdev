@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
   /* Box sizing rules */
 *,
 *::before,
@@ -43,6 +45,7 @@ body,
 
 body {
   line-height: 1.5;
+  
 }
 
 /* A elements that don't have a class get default styles */

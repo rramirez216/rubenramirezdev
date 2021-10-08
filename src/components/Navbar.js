@@ -23,7 +23,8 @@ const Nav = styled.nav`
   flex-flow: row nowrap;
   justify-content: center;
   gap: 8px;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 100px;
 `
 
@@ -35,6 +36,7 @@ const NavLink = styled(Link)`
   display: block;
   text-align: center;
   width: 100%;
+  padding: 8px;
   border-radius: 32px;
   background-color: white;
   color: hsl(133, 30%, 41%);

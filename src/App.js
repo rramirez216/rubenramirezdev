@@ -1,20 +1,25 @@
-import React from 'react'
+import {React, useState} from 'react'
 import styled from 'styled-components'
 import GlobalStyles from './components/globalstyles/GlobalStyles'
 import { Switch, Route } from 'react-router-dom';
-import { Navbar } from './components/navbar/Navbar'
-import { About } from './components/about/About'
-import { Projects } from './components/projects/Projects'
-import { Contact } from './components/contact/Contact'
+import { Navbar } from './components/Navbar'
+import { About } from './components/About'
+import { Projects } from './components/Projects'
+import { Contact } from './components/Contact'
+import { ProjectDetail } from './components/ProjectDetail'
 
 const App = () => {
+  const [projectPath, setProjectPath] = useState('prooject')
+  const [currentProject, setCurrentProject] = useState({title: 'hello'})
+
   return (
     <Wrapper>
       <Navbar />
       {/* <InnerWrapper> */}
         <Switch>
           <Route path='/contact' render={() => <Contact />}/>
-          <Route path='/projects' render={() => <Projects />}/>
+          <Route path='/projects' render={() => <Projects setProjectPath={setProjectPath} setCurrentProject={setCurrentProject} />}/>
+          <Route path={`/${projectPath}`} render={() => <ProjectDetail currentProject={currentProject} />} />
           <Route exact path='/' render={() => <About />}/>
         </Switch>
       {/* </InnerWrapper> */}
@@ -32,14 +37,9 @@ const Wrapper = styled.main`
   color: hsl(133, 30%, 41%);
   display: flex;
   flex-flow: column;
+  align-items: center;
   overflow-y: scroll;
+  font-family: 'Roboto Mono', monospace;
 `
-
-// const InnerWrapper = styled.div`
-//   /* width: 100%; */
-//   /* height: 100%; */
-//   display: flex;
-//   align-items: center;
-// `
 
 export default App;
