@@ -28,6 +28,9 @@ export const Projects = ({setProjectPath, setCurrentProject}) => {
 
 const Wrapper = styled.div`
   width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   background-color: white;
   border-radius: 32px;
   padding: 16px;

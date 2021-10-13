@@ -23,6 +23,8 @@ export const ProjectCard = ({setProjectPath, details, setCurrentProject, photo})
 }
 
 const Wrapper = styled.div`
+  max-width: 350px;
+  min-width: 300px;
   background-color: white;
   border-radius: 32px;
   padding: 16px;
@@ -41,15 +43,6 @@ const ProjectTitle = styled.h2`
 const ProjectText = styled.p`
   margin-bottom: 16px
 `
-
-// const LinkWrapper = styled.div`
-//   display: flex;
-//   flex-flow: row nowrap;
-//   width: fit-content;
-//   background-color: hsl(353, 45%, 37%);
-//   padding: 8px;
-//   border-radius: 16px;
-// `
 
 const Details = styled(Link)`
   display: flex;
