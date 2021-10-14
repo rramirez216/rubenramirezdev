@@ -18,15 +18,18 @@ export const Projects = ({setProjectPath, setCurrentProject}) => {
   //     }
   //   ]
 
-    let [firstProject] = projectsArr
+    // let [firstProject] = projectsArr
   return (
     <Wrapper>
-      <ProjectCard setProjectPath={setProjectPath} details={firstProject} setCurrentProject={setCurrentProject} photo={Blank}/>
+    {projectsArr.map((value, index) => <ProjectCard key={index} setProjectPath={setProjectPath} details={value} setCurrentProject={setCurrentProject} photo={Blank}/> )}
+      
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
+  min-width: 334px;
+  max-width: 868px;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -34,4 +37,22 @@ const Wrapper = styled.div`
   background-color: white;
   border-radius: 32px;
   padding: 16px;
+  gap: 16px;
+
+
+@media (min-width: 550px) {
+  /* Tablets */
+}
+@media (min-width: 48rem) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 32px;
+}
+@media (min-width: 54.375rem) {
+  
+}
+@media (min-width: 1500px) {
+  /* Desktop */
+}
 `

@@ -30,6 +30,7 @@ const Wrapper = styled.div`
   padding: 16px;
   display: flex;
   flex-flow: column nowrap;
+  border: 2px solid hsl(353, 45%, 37%);
 `
 
 const ProjectImage = styled.img`

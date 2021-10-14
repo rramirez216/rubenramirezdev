@@ -71,6 +71,6 @@ const Dash = styled.span`
   min-width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1px solid hsl(353, 45%, 37%);
+  border: 2px solid hsl(353, 45%, 37%);
   align-self: center;
 `

@@ -22,7 +22,7 @@ export const Contact = ({copied, setCopied}) => {
         </a>
       </SocialWrapper>
       <h1>Copy:</h1>
-      <h3>{copied ? 'Copied!' : 'rubenramirez.dev@gmail.com'}</h3>
+      <CopyText>{copied ? 'Copied!' : 'rubenramirez.dev@gmail.com'}</CopyText>
       <CopyToClipboard text='rubenramirez.dev@gmail.com' onCopy={() => setCopied(true)}>
         <CopyButton />
       </CopyToClipboard>
@@ -31,10 +31,22 @@ export const Contact = ({copied, setCopied}) => {
 }
 
 const Wrapper = styled.div`
+  max-width: 868px;
+  min-width: 334px;
   width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   background-color: white;
   padding: 16px;
   border-radius: 32px;
+  @media (min-width: 34.375rem) {
+    padding: 32px;
+  }
+
+  @media (min-width: 54.375rem) {
+    padding: 64px;
+  }
 `
 const SocialWrapper = styled.div`
   display: flex;
@@ -43,7 +55,6 @@ const SocialWrapper = styled.div`
   margin: 16px 0 32px;
   & > a {
     display: block;
-    
   }
 
   & > a:link {
@@ -60,6 +71,11 @@ const SocialWrapper = styled.div`
     height: 32px;
   }
 `
+
+const CopyText = styled.h3`
+  margin: 16px 0 32px;
+`
+
 const CopyButton = styled(Copy)`
   display: block;
   width: 32px;
