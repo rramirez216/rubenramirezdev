@@ -13,6 +13,9 @@ export const About = () => {
       
       <ParagraphWrapper>
         <Heading>About Me</Heading>
+        <Paragraph>
+          Hi there! I'm <Highlight>Ruben Ramirez</Highlight>, a self-motivated <Highlight>Full-Stack Web Developer</Highlight> based in San Diego, CA. I have a passion for learning new things, solving problems, and bringing joy to others through code.
+        </Paragraph>
         {aboutParagraphs.map((p, i) => <Paragraph key={i}>{p}</Paragraph>)}
       </ParagraphWrapper>
       <SkillsWrapper>
@@ -89,6 +92,7 @@ const Paragraph = styled.p`
 const Highlight = styled.span`
   font-weight: 700;
   color: hsl(353, 45%, 37%);
+  text-decoration: underline;
 `
 
 const SkillList = styled.ul`

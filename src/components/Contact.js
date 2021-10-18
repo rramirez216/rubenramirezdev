@@ -81,4 +81,5 @@ const CopyButton = styled(Copy)`
   width: 32px;
   height: 32px;
   color: #8a343e;
+  cursor: pointer;
 `
