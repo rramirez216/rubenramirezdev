@@ -7,13 +7,20 @@ export const About = () => {
 
   return (
     <Wrapper>
-      <SelfPortrait src={Portrait} alt='A portrait of Ruben Ramirez' />
-      <Heading>About Me</Heading>
-      {aboutParagraphs.map((p, i) => <Paragraph key={i}>{p}</Paragraph>)}
+      {/* <ImageWrapper> */}
+        <SelfPortrait src={Portrait} alt='A portrait of Ruben Ramirez' />
+      {/* </ImageWrapper> */}
+      
+      <ParagraphWrapper>
+        <Heading>About Me</Heading>
+        {aboutParagraphs.map((p, i) => <Paragraph key={i}>{p}</Paragraph>)}
+      </ParagraphWrapper>
+      <SkillsWrapper>
       <Heading>Skills</Heading>
       <SkillList>
         {skills.map((skill, i) => <ListItem key={i}><Dash></Dash>{skill}</ListItem>)}
       </SkillList>
+      </SkillsWrapper>
     </Wrapper>
   )
 }
@@ -29,11 +36,28 @@ const Wrapper = styled.article`
   align-items: center;
   font-family: 'Roboto Mono', monospace;
   /* border: 4px solid hsl(353, 45%, 37%); */
+
+  @media (min-width: 56.25rem) {
+    max-width: 960px;
+    display: grid;
+    column-gap: 32px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px 1fr;
+    
+  }
 `
 
-const Heading = styled.h1`
-  margin: 32px 0;
-  color: hsl(353, 45%, 37%);
+const ParagraphWrapper = styled.div`
+  grid-column: span 3;
+`
+
+const SkillsWrapper = styled.div`
+grid-column: span 2;
+/* align-self: center; */
+justify-self: center;
+@media (min-width: 56.35rem) {
+  align-self: start;
+}
 `
 
 const SelfPortrait = styled.img`
@@ -41,7 +65,18 @@ const SelfPortrait = styled.img`
   border-radius: 50%;
   margin-top: -100px;
   border: 8px solid white;
-  /* border: 4px solid hsl(353, 45%, 37%); */
+  grid-column: span 5;
+  justify-self: center;
+  @media (min-width: 56.35rem) {
+  width: 250px;
+  margin-top: -125px;
+}
+`
+
+const Heading = styled.h1`
+  text-align: center;
+  margin: 32px 0;
+  color: hsl(353, 45%, 37%);
 `
 
 const Paragraph = styled.p`
@@ -51,13 +86,26 @@ const Paragraph = styled.p`
   }
 `
 
+const Highlight = styled.span`
+  font-weight: 700;
+  color: hsl(353, 45%, 37%);
+`
+
 const SkillList = styled.ul`
   list-style: none;
   padding: 0;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 16px;
+  @media (min-width: 56.25rem) {
+    display: grid;
+    gap: 16px 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
 `
 const ListItem = styled.li`
   display: flex;

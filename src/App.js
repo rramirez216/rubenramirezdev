@@ -9,8 +9,8 @@ import { Contact } from './components/Contact'
 import { ProjectDetail } from './components/ProjectDetail'
 
 const App = () => {
-  const [projectPath, setProjectPath] = useState('project')
-  const [currentProject, setCurrentProject] = useState({title: 'hello'})
+  const [projectPath, setProjectPath] = useState(() => JSON.parse(localStorage.getItem('project')))
+  const [currentProject, setCurrentProject] = useState(() => JSON.parse(localStorage.getItem('current')))
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
@@ -18,6 +18,11 @@ const App = () => {
       if(copied) setCopied(false)        
     }, 5000)
   }, [copied])
+
+  useEffect(() => {
+    localStorage.setItem('project', JSON.stringify(projectPath))
+    localStorage.setItem('current', JSON.stringify(currentProject))
+  }, [projectPath, currentProject])
 
   return (
     <Wrapper>
@@ -44,6 +49,12 @@ const Wrapper = styled.main`
   align-items: center;
   overflow-y: scroll;
   font-family: 'Roboto Mono', monospace;
+  @media (min-width: 31.25rem) {
+    padding: 16px;
+  }
+  @media (min-width: 56.25rem) {
+    padding: 32px;
+  }
 `
 
 export default App;

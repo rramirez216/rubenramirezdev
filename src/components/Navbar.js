@@ -26,6 +26,10 @@ const Nav = styled.nav`
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 100px;
+  @media (min-width: 56.35rem) {
+  margin-bottom: 128px;
+  gap: 32px;
+}
 `
 
 const LinkWrapper = styled.div`

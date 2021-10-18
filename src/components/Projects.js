@@ -6,23 +6,9 @@ import {projectsArr} from '../data/data'
 
 
 export const Projects = ({setProjectPath, setCurrentProject}) => {
-  // const projectsArr = 
-  //   [
-  //     {
-  //       img: Blank,
-  //       title: 'Project', 
-  //       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  //       details: {
-  //         title: 'project'
-  //       }
-  //     }
-  //   ]
-
-    // let [firstProject] = projectsArr
   return (
     <Wrapper>
     {projectsArr.map((value, index) => <ProjectCard key={index} setProjectPath={setProjectPath} details={value} setCurrentProject={setCurrentProject} photo={Blank}/> )}
-      
     </Wrapper>
   )
 }
@@ -40,7 +26,7 @@ const Wrapper = styled.div`
   gap: 16px;
 
 
-@media (min-width: 550px) {
+@media (min-width: 500px) {
   /* Tablets */
 }
 @media (min-width: 48rem) {
