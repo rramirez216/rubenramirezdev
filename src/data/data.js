@@ -2,21 +2,19 @@
 const projectsArr = 
 [
   {
-    img: '../Assets/images/blank.png',
-    title: 'Title',
+    id: 0,
+    title: 'LoL Champions',
     name: 'title', 
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'A League of Legends tool to find out basic information about a champion.',
     view: {
-      title: 'it works'
-    }
-  },
-  {
-    img: '../Assets/images/blank.png',
-    title: 'Title2',
-    name: 'title2', 
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    view: {
-      title: 'it works'
+      title: 'it works',
+      stack: ['CSS', 'JavaScript', 'ReactJS'],
+      code: '',
+      demo: '',
+      summary: 'A web app that lists all playable champions of the popular online multiplayer video game League of Legends. It allows users to filter through the list of champions and find out their lore, abilities, descriptions of abilities, and images.',
+      purpose: 'I built this with the intention of gaining experience fetching data, using ReactJS with hooks. I have also long desired to build something using a League of Legends api.',
+      lessons: 'I learned to use a conditional statement to check if a prop has data loaded onto it before attempting to display it on the page to avoid it crashing the react app. Another lesson I learned was using localStorage to allow data to persist after a page refresh',
+      showcase: 'I would like to showcase'
     }
   }
 ]

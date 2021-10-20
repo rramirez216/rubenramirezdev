@@ -2,15 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { ChevronsRight } from 'react-feather'
+import Lol from '../Assets/images/lol-champions-screenshot.png'
 
 export const ProjectCard = ({setProjectPath, details, setCurrentProject, photo}) => {
   return (
     <Wrapper>
-      <ProjectImage src={photo} alt='League of legends react app'/>
+      <ImageWrapper>
+        <ProjectImage src={details.id === 0 ? Lol : photo} alt='League of legends react app'/>
+      </ImageWrapper>
       <ProjectTitle>{details.title}</ProjectTitle>
       <ProjectText>{details.description}</ProjectText>
         <Details 
-          to={`/${details.name}`} 
+          to={details.id === 0 ? 'lol-champions' : 'projects'} 
           onClick={() => {
           setCurrentProject(details.view)
           setProjectPath(details.name)
@@ -33,12 +36,24 @@ const Wrapper = styled.div`
   border: 2px solid hsl(353, 45%, 37%);
 `
 
+const ImageWrapper = styled.div`
+  border-radius: 32px;
+  overflow: hidden;
+  
+`
+
 const ProjectImage = styled.img`
   border-radius: 32px;
+  display: block;
+  transition: transform 500ms ease-in-out;
+  &:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+  }
 `
 
 const ProjectTitle = styled.h2`
-  margin: 16px 0 8px;
+  margin: 32px 0 16px;
 `
 
 const ProjectText = styled.p`

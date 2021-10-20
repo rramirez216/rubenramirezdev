@@ -7,6 +7,7 @@ import { About } from './components/About'
 import { Projects } from './components/Projects'
 import { Contact } from './components/Contact'
 import { ProjectDetail } from './components/ProjectDetail'
+import { LolChampions } from './pages/LolChampions';
 
 const App = () => {
   const [projectPath, setProjectPath] = useState(() => JSON.parse(localStorage.getItem('project')))
@@ -30,7 +31,7 @@ const App = () => {
         <Switch>
           <Route path='/contact' render={() => <Contact copied={copied} setCopied={setCopied} />}/>
           <Route path='/projects' render={() => <Projects setProjectPath={setProjectPath} setCurrentProject={setCurrentProject} />}/>
-          <Route path={`/${projectPath}`} render={() => <ProjectDetail currentProject={currentProject} />} />
+          <Route path='/lol-champions' render={() => <LolChampions currentProject={currentProject} />} />
           <Route exact path='/' render={() => <About />}/>
         </Switch>
       <GlobalStyles />
