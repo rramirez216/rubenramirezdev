@@ -7,29 +7,23 @@ export const About = () => {
 
   return (
     <Wrapper>
-      {/* <ImageWrapper> */}
         <SelfPortrait src={Portrait} alt='A portrait of Ruben Ramirez' />
-      {/* </ImageWrapper> */}
-      
-      <ParagraphWrapper>
+      <InnerWrapper>
         <Heading>About Me</Heading>
-        <Paragraph>
-          Hi there! I'm <Highlight>Ruben Ramirez</Highlight>, a self-motivated <Highlight>Full-Stack Web Developer</Highlight> based in San Diego, CA. I have a passion for learning new things, solving problems, and bringing joy to others through code.
-        </Paragraph>
-        {aboutParagraphs.map((p, i) => <Paragraph key={i}>{p}</Paragraph>)}
-      </ParagraphWrapper>
-      <SkillsWrapper>
-      <Heading>Skills</Heading>
-      <SkillList>
-        {skills.map((skill, i) => <ListItem key={i}><Dash></Dash>{skill}</ListItem>)}
-      </SkillList>
-      </SkillsWrapper>
+          <Paragraph>
+            Hi there! I'm <Highlight>Ruben Ramirez</Highlight>, a self-motivated <Highlight>Full-Stack Web Developer</Highlight> based in San Diego, CA. I have a passion for learning new things, solving problems, and bringing joy to others through code.
+          </Paragraph>
+          {aboutParagraphs.map((p, i) => <Paragraph key={i}>{p}</Paragraph>)}
+          <Heading>Skills</Heading>
+          <SkillList>
+            {skills.map((skill, i) => <ListItem key={i}><Dash></Dash>{skill}</ListItem>)}
+          </SkillList>
+      </InnerWrapper>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.article`
-  /* width: 100%; */
   max-width: 550px;
   background-color: white;
   border-radius: 32px;
@@ -38,29 +32,19 @@ const Wrapper = styled.article`
   flex-flow: column nowrap;
   align-items: center;
   font-family: 'Roboto Mono', monospace;
-  /* border: 4px solid hsl(353, 45%, 37%); */
-
   @media (min-width: 56.25rem) {
     max-width: 960px;
-    display: grid;
-    column-gap: 32px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 100px 1fr;
-    
   }
 `
 
-const ParagraphWrapper = styled.div`
-  grid-column: span 3;
-`
-
-const SkillsWrapper = styled.div`
-grid-column: span 2;
-/* align-self: center; */
-justify-self: center;
-@media (min-width: 56.35rem) {
-  align-self: start;
-}
+const InnerWrapper = styled.div`
+  @media (min-width: 56.25rem) {
+    align-self: flex-start;
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    height: 600px;
+  }
 `
 
 const SelfPortrait = styled.img`
@@ -70,9 +54,10 @@ const SelfPortrait = styled.img`
   border: 8px solid white;
   grid-column: span 5;
   justify-self: center;
+  box-shadow: rgb(138 52 62 / 75%) 2px 4px 2px;
   @media (min-width: 56.35rem) {
-  width: 250px;
-  margin-top: -125px;
+    width: 250px;
+    margin-top: -125px;
 }
 `
 
@@ -80,13 +65,22 @@ const Heading = styled.h1`
   text-align: center;
   margin: 32px 0;
   color: hsl(353, 45%, 37%);
+  &:nth-child(6) {
+      margin: 0 0 32px;
+    }
 `
 
 const Paragraph = styled.p`
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   &:nth-child(6) {
     margin: 0;
   }
+  @media (min-width: 56.35rem) {
+    &:nth-child(4) {
+      margin-top: 100px;
+    }
+  }
+  
 `
 
 const Highlight = styled.span`
@@ -103,6 +97,7 @@ const SkillList = styled.ul`
   flex-flow: row wrap;
   justify-content: center;
   gap: 16px;
+  margin: 0 0 0;
   @media (min-width: 56.25rem) {
     display: grid;
     gap: 16px 0;
@@ -114,7 +109,10 @@ const SkillList = styled.ul`
 const ListItem = styled.li`
   display: flex;
   width: 100px;
-  gap: 4px;
+  gap: 8px;
+  &:nth-child(4) {
+    order: 2;
+  }
 `
 
 const Dash = styled.span`

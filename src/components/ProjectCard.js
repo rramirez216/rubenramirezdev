@@ -33,7 +33,8 @@ const Wrapper = styled.div`
   padding: 16px;
   display: flex;
   flex-flow: column nowrap;
-  border: 2px solid hsl(353, 45%, 37%);
+  /* border: 2px solid hsl(353, 45%, 37%); */
+  box-shadow: rgb(138 52 62 / 75%) 2px 4px 4px;
 `
 
 const ImageWrapper = styled.div`
@@ -48,7 +49,6 @@ const ProjectImage = styled.img`
   transition: transform 500ms ease-in-out;
   &:hover {
     transform: scale(1.5);
-    cursor: pointer;
   }
 `
 
@@ -62,11 +62,11 @@ const ProjectText = styled.p`
 
 const Details = styled(Link)`
   display: flex;
-  /* color: hsl(353, 45%, 37%); */
   width: fit-content;
   background-color: hsl(353, 45%, 37%);
   padding: 8px;
   border-radius: 16px;
+  box-shadow: rgb(138 52 62 / 75%) 2px 4px 2px;
   color: white;
   &:link {
     text-decoration: none;
@@ -84,6 +84,5 @@ const LinkText = styled.span`
 `
 
 const Chevrons = styled(ChevronsRight)`
-  /* color: #8a343e; */
   color: white;
 `

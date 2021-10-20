@@ -24,7 +24,10 @@ export const Contact = ({copied, setCopied}) => {
       <h1>Copy:</h1>
       <CopyText>{copied ? 'Copied!' : 'rubenramirez.dev@gmail.com'}</CopyText>
       <CopyToClipboard text='rubenramirez.dev@gmail.com' onCopy={() => setCopied(true)}>
+      <CopyWrapper>
         <CopyButton />
+      </CopyWrapper>
+        
       </CopyToClipboard>
     </Wrapper>
   )
@@ -55,6 +58,9 @@ const SocialWrapper = styled.div`
   margin: 16px 0 32px;
   & > a {
     display: block;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: rgb(138 52 62 / 75%) 2px 4px 2px;
   }
 
   & > a:link {
@@ -74,6 +80,12 @@ const SocialWrapper = styled.div`
 
 const CopyText = styled.h3`
   margin: 16px 0 32px;
+`
+
+const CopyWrapper = styled.div`
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: rgb(138 52 62 / 75%) 2px 4px 2px;
 `
 
 const CopyButton = styled(Copy)`

@@ -19,7 +19,7 @@ const projectsArr =
   }
 ]
 
-const skills = [' HTML', ' CSS', ' JavaScript', ' React', ' Node.JS', ' MongoDB', ' Express', ' PostgreSQL']
+const skills = [' HTML', ' CSS', ' React', ' JavaScript', ' Node.JS', ' MongoDB', ' Express', ' PostgreSQL']
 
 const aboutParagraphs = 
   [

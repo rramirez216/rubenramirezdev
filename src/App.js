@@ -48,7 +48,7 @@ const Wrapper = styled.main`
   display: flex;
   flex-flow: column;
   align-items: center;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   font-family: 'Roboto Mono', monospace;
   @media (min-width: 31.25rem) {
     padding: 16px;
