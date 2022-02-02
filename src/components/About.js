@@ -1,23 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
 import Portrait from '../Assets/images/portrait.JPG'
-import { skills, aboutParagraphs} from '../data/data'
+import { skills, aboutParagraphs } from '../data/data'
 
 export const About = () => {
-
   return (
     <Wrapper>
-        <SelfPortrait src={Portrait} alt='A portrait of Ruben Ramirez' />
+      <SelfPortrait src={Portrait} alt='A portrait of Ruben Ramirez' />
       <InnerWrapper>
         <Heading>About Me</Heading>
-          <Paragraph>
-            Hi there! I'm <Highlight>Ruben Ramirez</Highlight>, a self-motivated <Highlight>Full-Stack Web Developer</Highlight> based in San Diego, CA. I have a passion for learning new things, solving problems, and bringing joy to others through code.
-          </Paragraph>
-          {aboutParagraphs.map((p, i) => <Paragraph key={i}>{p}</Paragraph>)}
-          <Heading>Skills</Heading>
-          <SkillList>
-            {skills.map((skill, i) => <ListItem key={i}><Dash></Dash>{skill}</ListItem>)}
-          </SkillList>
+        <Paragraph>
+          Hi there! I'm <Highlight>Ruben Ramirez</Highlight>, a self-motivated{' '}
+          <Highlight>Frontend Web Developer</Highlight> based in San Diego, CA.
+          I have a passion for learning new things, solving problems, and
+          bringing joy to others through code.
+        </Paragraph>
+        {aboutParagraphs.map((p, i) => (
+          <Paragraph key={i}>{p}</Paragraph>
+        ))}
+        <Heading>Skills</Heading>
+        <SkillList>
+          {skills.map((skill, i) => (
+            <ListItem key={i}>
+              <Dash></Dash>
+              {skill}
+            </ListItem>
+          ))}
+        </SkillList>
       </InnerWrapper>
     </Wrapper>
   )
@@ -58,7 +67,7 @@ const SelfPortrait = styled.img`
   @media (min-width: 56.35rem) {
     width: 250px;
     margin-top: -125px;
-}
+  }
 `
 
 const Heading = styled.h1`
@@ -66,8 +75,8 @@ const Heading = styled.h1`
   margin: 32px 0;
   color: hsl(353, 45%, 37%);
   &:nth-child(6) {
-      margin: 0 0 32px;
-    }
+    margin: 0 0 32px;
+  }
 `
 
 const Paragraph = styled.p`
@@ -80,7 +89,6 @@ const Paragraph = styled.p`
       margin-top: 100px;
     }
   }
-  
 `
 
 const Highlight = styled.span`
@@ -104,7 +112,6 @@ const SkillList = styled.ul`
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-  
 `
 const ListItem = styled.li`
   display: flex;

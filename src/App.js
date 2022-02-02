@@ -1,22 +1,27 @@
-import {React, useState, useEffect} from 'react'
+import { React, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import GlobalStyles from './components/globalstyles/GlobalStyles'
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { About } from './components/About'
 import { Projects } from './components/Projects'
 import { Contact } from './components/Contact'
 import { ProjectDetail } from './components/ProjectDetail'
-import { LolChampions } from './pages/LolChampions';
+import { LolChampions } from './pages/LolChampions'
+import { Salvamex } from './pages/Salvamex'
 
 const App = () => {
-  const [projectPath, setProjectPath] = useState(() => JSON.parse(localStorage.getItem('project')))
-  const [currentProject, setCurrentProject] = useState(() => JSON.parse(localStorage.getItem('current')))
+  const [projectPath, setProjectPath] = useState(() =>
+    JSON.parse(localStorage.getItem('project'))
+  )
+  const [currentProject, setCurrentProject] = useState(() =>
+    JSON.parse(localStorage.getItem('current'))
+  )
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      if(copied) setCopied(false)        
+      if (copied) setCopied(false)
     }, 5000)
   }, [copied])
 
@@ -28,12 +33,30 @@ const App = () => {
   return (
     <Wrapper>
       <Navbar />
-        <Switch>
-          <Route path='/contact' render={() => <Contact copied={copied} setCopied={setCopied} />}/>
-          <Route path='/projects' render={() => <Projects setProjectPath={setProjectPath} setCurrentProject={setCurrentProject} />}/>
-          <Route path='/lol-champions' render={() => <LolChampions currentProject={currentProject} />} />
-          <Route exact path='/' render={() => <About />}/>
-        </Switch>
+      <Switch>
+        <Route
+          path='/contact'
+          render={() => <Contact copied={copied} setCopied={setCopied} />}
+        />
+        <Route
+          path='/projects'
+          render={() => (
+            <Projects
+              setProjectPath={setProjectPath}
+              setCurrentProject={setCurrentProject}
+            />
+          )}
+        />
+        <Route
+          path='/lol-champions'
+          render={() => <LolChampions currentProject={currentProject} />}
+        />
+        <Route
+          path='/salvamex'
+          render={() => <Salvamex currentProject={currentProject} />}
+        />
+        <Route exact path='/' render={() => <About />} />
+      </Switch>
       <GlobalStyles />
     </Wrapper>
   )
@@ -58,4 +81,4 @@ const Wrapper = styled.main`
   }
 `
 
-export default App;
+export default App

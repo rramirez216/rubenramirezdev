@@ -3,24 +3,34 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { ChevronsRight } from 'react-feather'
 import Lol from '../Assets/images/lol-champions-screenshot.png'
+import salvamex from '../Assets/images/salvamex.png'
 
-export const ProjectCard = ({setProjectPath, details, setCurrentProject, photo}) => {
+export const ProjectCard = ({
+  setProjectPath,
+  details,
+  setCurrentProject,
+  photo,
+}) => {
   return (
     <Wrapper>
       <ImageWrapper>
-        <ProjectImage src={details.id === 0 ? Lol : photo} alt='League of legends react app'/>
+        <ProjectImage
+          src={details.id === 0 ? Lol : salvamex}
+          alt='League of legends react app'
+        />
       </ImageWrapper>
       <ProjectTitle>{details.title}</ProjectTitle>
       <ProjectText>{details.description}</ProjectText>
-        <Details 
-          to={details.id === 0 ? 'lol-champions' : 'projects'} 
-          onClick={() => {
+      <Details
+        to={details.id === 0 ? 'lol-champions' : 'Salvamex'}
+        onClick={() => {
           setCurrentProject(details.view)
           setProjectPath(details.name)
-        }}>
-          <LinkText>View Details</LinkText>
-          <Chevrons /> 
-        </Details>
+        }}
+      >
+        <LinkText>View Details</LinkText>
+        <Chevrons />
+      </Details>
     </Wrapper>
   )
 }
@@ -40,7 +50,6 @@ const Wrapper = styled.div`
 const ImageWrapper = styled.div`
   border-radius: 32px;
   overflow: hidden;
-  
 `
 
 const ProjectImage = styled.img`
@@ -57,7 +66,7 @@ const ProjectTitle = styled.h2`
 `
 
 const ProjectText = styled.p`
-  margin-bottom: 16px
+  margin-bottom: 16px;
 `
 
 const Details = styled(Link)`
@@ -74,13 +83,11 @@ const Details = styled(Link)`
 
   & > svg {
     display: block;
-    
   }
 `
 
 const LinkText = styled.span`
   display: block;
-
 `
 
 const Chevrons = styled(ChevronsRight)`
