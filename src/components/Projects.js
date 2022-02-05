@@ -4,17 +4,11 @@ import { ProjectCard } from './ProjectCard'
 import Blank from '../Assets/images/blank.png'
 import { projectsArr } from '../data/data'
 
-export const Projects = ({ setProjectPath, setCurrentProject }) => {
+export const Projects = () => {
   return (
     <Wrapper>
       {projectsArr.map((value, index) => (
-        <ProjectCard
-          key={index}
-          setProjectPath={setProjectPath}
-          details={value}
-          setCurrentProject={setCurrentProject}
-          photo={Blank}
-        />
+        <ProjectCard key={index} details={value} photo={Blank} />
       ))}
     </Wrapper>
   )

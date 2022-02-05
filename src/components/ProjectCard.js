@@ -5,12 +5,7 @@ import { ChevronsRight } from 'react-feather'
 import Lol from '../Assets/images/lol-champions-screenshot.png'
 import salvamex from '../Assets/images/salvamex.png'
 
-export const ProjectCard = ({
-  setProjectPath,
-  details,
-  setCurrentProject,
-  photo,
-}) => {
+export const ProjectCard = ({ details }) => {
   return (
     <Wrapper>
       <ImageWrapper>
@@ -21,13 +16,7 @@ export const ProjectCard = ({
       </ImageWrapper>
       <ProjectTitle>{details.title}</ProjectTitle>
       <ProjectText>{details.description}</ProjectText>
-      <Details
-        to={details.id === 0 ? 'lol-champions' : 'Salvamex'}
-        onClick={() => {
-          setCurrentProject(details.view)
-          setProjectPath(details.name)
-        }}
-      >
+      <Details to={details.id === 0 ? 'lol-champions' : 'Salvamex'}>
         <LinkText>View Details</LinkText>
         <Chevrons />
       </Details>

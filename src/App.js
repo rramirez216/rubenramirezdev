@@ -6,17 +6,10 @@ import { Navbar } from './components/Navbar'
 import { About } from './components/About'
 import { Projects } from './components/Projects'
 import { Contact } from './components/Contact'
-import { ProjectDetail } from './components/ProjectDetail'
 import { LolChampions } from './pages/LolChampions'
 import { Salvamex } from './pages/Salvamex'
 
 const App = () => {
-  const [projectPath, setProjectPath] = useState(() =>
-    JSON.parse(localStorage.getItem('project'))
-  )
-  const [currentProject, setCurrentProject] = useState(() =>
-    JSON.parse(localStorage.getItem('current'))
-  )
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
@@ -24,11 +17,6 @@ const App = () => {
       if (copied) setCopied(false)
     }, 5000)
   }, [copied])
-
-  useEffect(() => {
-    localStorage.setItem('project', JSON.stringify(projectPath))
-    localStorage.setItem('current', JSON.stringify(currentProject))
-  }, [projectPath, currentProject])
 
   return (
     <Wrapper>
@@ -38,23 +26,9 @@ const App = () => {
           path='/contact'
           render={() => <Contact copied={copied} setCopied={setCopied} />}
         />
-        <Route
-          path='/projects'
-          render={() => (
-            <Projects
-              setProjectPath={setProjectPath}
-              setCurrentProject={setCurrentProject}
-            />
-          )}
-        />
-        <Route
-          path='/lol-champions'
-          render={() => <LolChampions currentProject={currentProject} />}
-        />
-        <Route
-          path='/salvamex'
-          render={() => <Salvamex currentProject={currentProject} />}
-        />
+        <Route path='/projects' render={() => <Projects />} />
+        <Route path='/lol-champions' render={() => <LolChampions />} />
+        <Route path='/salvamex' render={() => <Salvamex />} />
         <Route exact path='/' render={() => <About />} />
       </Switch>
       <GlobalStyles />
