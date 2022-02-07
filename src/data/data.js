@@ -23,7 +23,7 @@ const projectsArr = [
     id: 1,
     title: 'SALVAMEX',
     description:
-      'A responsive brochure webpage promoting the services of the construction company SALVAMEX.',
+      'A responsive brochure webpage promoting the services, and showcasing the work provided by the construction company SALVAMEX.',
     view: {
       title: 'it works',
       stack: ['TailwindCSS', 'JavaScript', 'HTML5'],
