@@ -1,6 +1,8 @@
 import { React, useState, useEffect } from 'react'
 import styled from 'styled-components'
+// components
 import GlobalStyles from './components/globalstyles/GlobalStyles'
+import Navigation from './components/Nav'
 
 const App = () => {
   // const [copied, setCopied] = useState(false)
@@ -11,7 +13,16 @@ const App = () => {
   //   }, 5000)
   // }, [copied])
 
-  return <div>hello</div>
+  return (
+    <Wrapper>
+      <Navigation />
+      <GlobalStyles />
+    </Wrapper>
+  )
 }
+
+const Wrapper = styled.div`
+  font-size: 1.5rem;
+`
 
 export default App
