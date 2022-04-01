@@ -3,21 +3,25 @@ import styled from 'styled-components'
 
 const Navigation = () => {
   return (
-    <Nav>
+    <Header>
       <Side>
         <Logo>Ruben Ramirez</Logo>
       </Side>
-      <NavLink href='#'>About</NavLink>
-      <NavLink href='#'>Projects</NavLink>
-      <NavLink href='#'>Contact</NavLink>
+      <Nav>
+        <NavLink href='#'>About</NavLink>
+        <NavLink href='#'>Projects</NavLink>
+        <NavLink href='#'>Contact</NavLink>
+      </Nav>
       <Side />
-    </Nav>
+    </Header>
   )
 }
 
-const Nav = styled.nav`
+const Header = styled.nav`
   display: flex;
   flex-flow: row nowrap;
+  align-items: baseline;
+  padding: 0 32px;
 `
 const Side = styled.div`
   flex: 1;
@@ -26,8 +30,13 @@ const Logo = styled.div`
   font-weight: 900;
   font-size: 2rem;
 `
+const Nav = styled.nav`
+  display: flex;
+  gap: 48px;
+  margin: 0 48px;
+`
 const NavLink = styled.a`
-  display: block;
+  text-decoration: none;
 `
 
 export default Navigation
