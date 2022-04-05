@@ -6,6 +6,7 @@ import Navigation from './components/Nav'
 
 const App = () => {
   // const [copied, setCopied] = useState(false)
+  const [isNavOpen, setIsNavOpen] = useState(false)
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -15,7 +16,7 @@ const App = () => {
 
   return (
     <Wrapper>
-      <Navigation />
+      <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <GlobalStyles />
     </Wrapper>
   )
