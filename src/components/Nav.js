@@ -1,8 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import { Menu, X } from 'react-feather'
 
 const Navigation = ({ isNavOpen, setIsNavOpen }) => {
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 1, x: '-100%' },
+  }
   return (
     <Header>
       <Side>
@@ -14,7 +19,11 @@ const Navigation = ({ isNavOpen, setIsNavOpen }) => {
         <NavLink href='#'>Contact</NavLink>
         <MenuButton onClick={() => setIsNavOpen(true)} />
       </Nav>
-      <MobileNav>
+      <MobileNav
+        variants={variants}
+        initial='closed'
+        animate={() => (isNavOpen ? 'open' : 'closed')}
+      >
         <CloseButton onClick={() => setIsNavOpen(false)} />
       </MobileNav>
       <Side />
@@ -32,7 +41,7 @@ const Header = styled.nav`
   align-items: baseline;
   justify-content: space-between;
   padding: 0 16px;
-  & ${Side}:nth-child(3) {
+  & ${Side}:nth-child(4) {
     display: none;
   }
   @media (min-width: 34.375rem) {
@@ -47,7 +56,7 @@ const Logo = styled.div`
   font-size: 2rem;
   /* width: max-content; */
 `
-const MobileNav = styled.nav`
+const MobileNav = styled(motion.nav)`
   width: 100%;
   height: 100%;
   position: fixed;
@@ -65,6 +74,7 @@ const CloseButton = styled(X)`
 const Nav = styled.nav`
   display: flex;
   align-self: center;
+  /* margin-left: auto; */
   /* gap: 48px; */
   /* margin: 0 48px; */
 `
