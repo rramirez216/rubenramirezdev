@@ -41,6 +41,7 @@ const Main = styled.main`
   display: flex;
   flex-flow: column nowrap;
   padding: 0 16px;
+  gap: 32px;
 `
 
 export default App
