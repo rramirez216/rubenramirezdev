@@ -5,9 +5,9 @@ import GlobalStyles from './components/globalstyles/GlobalStyles'
 import Navigation from './components/Nav'
 import Portrait from './components/Portrait'
 import About from './components/About'
-// image
-
-// SVG Icons
+import Skills from './components/Skills'
+import ProjectList from './components/ProjectList'
+import Contact from './components/Contact'
 
 const App = () => {
   // const [copied, setCopied] = useState(false)
@@ -25,6 +25,9 @@ const App = () => {
       <Main>
         <Portrait />
         <About />
+        <Skills />
+        <ProjectList />
+        <Contact />
       </Main>
       <GlobalStyles />
     </Wrapper>
