@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const About = () => {
   return (
     <Wrapper>
-      {/* <h1>About</h1> */}
+      <h2>About</h2>
       <p>
         Hi there! I'm Ruben Ramirez, a self-motivated Frontend Web Developer
         based in San Diego, CA. I have a passion for learning new things,
