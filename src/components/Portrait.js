@@ -39,16 +39,21 @@ const ImageWrapper = styled.div`
   border-radius: 50%;
   overflow: hidden;
 `
-const Image = styled.img`
-  display: block;
-  /* width: 100%; */
-`
+const Image = styled.img``
 const LinkWrapper = styled.div`
   display: flex;
-  gap: 16px;
+  gap: 24px;
 `
 const Link = styled.a`
   display: block;
+  &:link {
+    /* color: hsl(138, 81%, 29%); */
+    color: hsl(0, 0%, 0%);
+  }
+  &:visited {
+    /* color: hsl(138, 81%, 29%); */
+    color: hsl(0, 0%, 0%);
+  }
 `
 
 export default Portrait
