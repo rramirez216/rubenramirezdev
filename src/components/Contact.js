@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Contact = () => {
   return (
     <Wrapper>
-      <h2>Get In Touch</h2>
+      <Heading>Get In Touch</Heading>
       <div>
         <p>contact info here</p>
       </div>
@@ -15,5 +15,9 @@ const Contact = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
+`
+const Heading = styled.h2`
+  font-size: 1.7rem;
+  width: 100%;
 `
 export default Contact

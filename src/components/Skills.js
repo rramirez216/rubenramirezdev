@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Skills = () => {
   return (
     <Wrapper>
-      <h2>Technologies I've worked with:</h2>
+      <Heading>Technologies I've worked with:</Heading>
       <List>
         <ListItem>HTML</ListItem>
         <ListItem>CSS</ListItem>
@@ -21,6 +21,10 @@ const Skills = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
+`
+const Heading = styled.h2`
+  font-size: 1.7rem;
+  width: 100%;
 `
 const List = styled.ul`
   list-style: none;

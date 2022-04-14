@@ -5,7 +5,7 @@ import Project from './Project'
 const ProjectList = () => {
   return (
     <Wrapper>
-      <h2>Projects</h2>
+      <Heading>Projects</Heading>
       <Project
         title={'Random Champion Generator'}
         summary={
@@ -19,5 +19,9 @@ const ProjectList = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
+`
+const Heading = styled.h2`
+  font-size: 1.7rem;
+  width: 100%;
 `
 export default ProjectList

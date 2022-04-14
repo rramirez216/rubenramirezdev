@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Project = ({ title, summary }) => {
   return (
     <Wrapper>
-      <h3>{title} -</h3>
+      <Title>{title} -</Title>
       <p>{summary}</p>
     </Wrapper>
   )
@@ -13,5 +13,9 @@ const Project = ({ title, summary }) => {
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
+`
+const Title = styled.h3`
+  font-size: 1.5rem;
+  /* width: 100%; */
 `
 export default Project
