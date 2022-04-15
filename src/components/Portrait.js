@@ -31,7 +31,8 @@ const Wrapper = styled.div`
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
+  margin-top: 32px;
 `
 const ImageWrapper = styled.div`
   width: 150px;
@@ -48,11 +49,16 @@ const Link = styled.a`
   display: block;
   &:link {
     /* color: hsl(138, 81%, 29%); */
-    color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 25%);
   }
   &:visited {
     /* color: hsl(138, 81%, 29%); */
-    color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 25%);
+  }
+
+  & svg {
+    height: 32px;
+    width: 32px;
   }
 `
 
