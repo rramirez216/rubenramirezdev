@@ -19,6 +19,7 @@ const ProjectList = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
+  gap: 16px;
 `
 const Heading = styled.h2`
   font-size: 1.7rem;
