@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import Accordian from './Accordian'
 
-const About = () => {
+const About = ({ isToggled, setIsToggled }) => {
   return (
     <Wrapper>
       <Heading>About</Heading>
@@ -10,6 +11,7 @@ const About = () => {
         based in San Diego, CA. I have a passion for learning new things,
         solving problems, and bringing joy to others through code.
       </Paragraph>
+      <Accordian isToggled={isToggled} setIsToggled={setIsToggled} />
     </Wrapper>
   )
 }
@@ -19,6 +21,7 @@ const Wrapper = styled.div`
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  gap: 16px;
 `
 const Heading = styled.h2`
   font-size: 1.7rem;
