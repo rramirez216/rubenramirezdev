@@ -12,6 +12,7 @@ import Contact from './components/Contact'
 const App = () => {
   // const [copied, setCopied] = useState(false)
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const [isToggled, setIsToggled] = useState(false)
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -24,7 +25,7 @@ const App = () => {
       <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <Main>
         <Portrait />
-        <About />
+        <About isToggled={isToggled} setIsToggled={setIsToggled} />
         <Skills />
         <ProjectList />
         <Contact />
@@ -36,10 +37,12 @@ const App = () => {
 
 const Wrapper = styled.div`
   font-size: 1.5rem;
+  color: hsl(0, 0%, 25%);
 `
 const Main = styled.main`
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
   padding: 0 16px;
   gap: 32px;
 `
