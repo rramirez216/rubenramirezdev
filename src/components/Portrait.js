@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 24px;
-  margin-top: 32px;
+  margin-top: 48px;
 `
 const ImageWrapper = styled.div`
   width: 150px;
