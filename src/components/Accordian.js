@@ -6,7 +6,7 @@ import { ChevronDown, ChevronUp } from 'react-feather'
 const Accordian = ({ isToggled, setIsToggled }) => {
   return (
     <Wrapper>
-      <Button onClick={() => setIsToggled(!isToggled)}>
+      <Button onClick={() => setIsToggled(!isToggled)} isToggled={isToggled}>
         <p>view more</p>
         {isToggled ? <ChevronUp /> : <ChevronDown />}
       </Button>
@@ -53,7 +53,7 @@ const Button = styled.button`
   border: none;
   background-color: hsl(0, 0%, 100%);
   padding: 0;
-  margin: 0;
+  margin: 0 0 ${(props) => (props.isToggled ? '24px' : '0')} 0;
   & svg {
     width: 32px;
     height: 32px;
