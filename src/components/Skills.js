@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import { skills } from '../data/data'
 
 const Skills = () => {
   return (
     <Wrapper>
       <Heading>Technologies I've worked with:</Heading>
       <List>
-        <ListItem>HTML</ListItem>
-        <ListItem>CSS</ListItem>
-        <ListItem>Tailwind CSS</ListItem>
-        <ListItem>Styled Components</ListItem>
-        <ListItem>JavaScript</ListItem>
-        <ListItem>React</ListItem>
-        <ListItem>Git & Github</ListItem>
+        {skills.map((skill, index) => (
+          <ListItem key={index}>
+            <Bullet></Bullet>
+            {skill}
+          </ListItem>
+        ))}
       </List>
     </Wrapper>
   )
@@ -32,5 +32,17 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
 `
-const ListItem = styled.li``
+const ListItem = styled.li`
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+`
+const Bullet = styled.span`
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 4px solid hsl(138, 81%, 29%);
+  /* background-color: hsl(138, 81%, 29%); */
+  border-radius: 50%;
+`
 export default Skills
