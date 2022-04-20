@@ -1,17 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import Project from './Project'
+import { projectsArr } from '../data/data'
 
 const ProjectList = () => {
   return (
     <Wrapper>
       <Heading>Projects</Heading>
-      <Project
-        title={'Random Champion Generator'}
-        summary={
-          'Randomly picks a league of legends champion for you to play in your next match.'
-        }
-      />
+      <div>
+        {projectsArr.map((project) => (
+          <Project
+            title={project.title}
+            description={project.description}
+            stack={project.stack}
+            repo={project.repo}
+            demo={project.demo}
+            key={project.id}
+          />
+        ))}
+      </div>
     </Wrapper>
   )
 }
