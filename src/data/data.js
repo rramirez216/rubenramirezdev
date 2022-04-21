@@ -4,7 +4,7 @@ const projectsArr = [
     title: 'Random Champion Picker',
     description:
       'A tool created to help pick a random League of Legends champion for the user to play.',
-    stack: ['CSS', 'JavaScript', 'ReactJS'],
+    stack: ['CSS,  ', 'Styled Components  ', 'JavaScript,  ', 'ReactJS'],
     repo: 'https://github.com/rramirez216/random-champion-picker',
     demo: 'https://randomchampionpicker.netlify.app/',
   },
@@ -13,7 +13,7 @@ const projectsArr = [
     title: 'SALVAMEX',
     description:
       'A responsive brochure website promoting the services, and showcasing the work provided by the construction company SALVAMEX.',
-    stack: ['TailwindCSS', 'JavaScript', 'HTML5'],
+    stack: ['TailwindCSS  , ', 'JavaScript  , ', 'HTML5'],
     repo: 'https://github.com/rramirez216/Salvamex',
     demo: 'https://salvamexconstruction.com/',
   },
@@ -22,8 +22,8 @@ const projectsArr = [
 // const skills = [' HTML', ' CSS', ' React', ' JavaScript', ' Node.JS', ' MongoDB', ' Express', ' PostgreSQL']
 
 const skills = [
-  ' HTML',
-  ' CSS',
+  'HTML',
+  'CSS',
   'Tailwind CSS',
   'Styled Components',
   'JavaScript',
