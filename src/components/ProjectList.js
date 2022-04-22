@@ -7,7 +7,7 @@ const ProjectList = () => {
   return (
     <Wrapper>
       <Heading>Projects</Heading>
-      <div>
+      <ListWrapper>
         {projectsArr.map((project) => (
           <Project
             title={project.title}
@@ -18,7 +18,7 @@ const ProjectList = () => {
             key={project.id}
           />
         ))}
-      </div>
+      </ListWrapper>
     </Wrapper>
   )
 }
@@ -31,5 +31,10 @@ const Wrapper = styled.div`
 const Heading = styled.h2`
   font-size: 1.7rem;
   width: 100%;
+`
+const ListWrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  gap: 32px;
 `
 export default ProjectList
