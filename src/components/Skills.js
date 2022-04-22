@@ -9,7 +9,7 @@ const Skills = () => {
       x: 0,
     },
     hover: {
-      x: 100,
+      x: 25,
     },
   }
   const bulletVariant = {
@@ -18,7 +18,7 @@ const Skills = () => {
       x: 0,
     },
     hover: {
-      x: 100,
+      x: 25,
       // opacity: 1,
       transition: {
         delay: 0.1,
@@ -65,14 +65,14 @@ const List = styled.ul`
 `
 const ListItem = styled(motion.li)`
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
 `
 const LiContainer = styled(motion.div)``
 const Bullet = styled(motion.span)`
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   /* border: 2px solid hsl(0, 0%, 25%); */
   border: 2px solid hsl(138, 81%, 29%);
   /* background-color: hsl(138, 81%, 29%); */
