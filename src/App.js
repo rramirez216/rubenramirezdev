@@ -10,15 +10,15 @@ import ProjectList from './components/ProjectList'
 import Contact from './components/Contact'
 
 const App = () => {
-  // const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false)
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [isToggled, setIsToggled] = useState(false)
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     if (copied) setCopied(false)
-  //   }, 5000)
-  // }, [copied])
+  useEffect(() => {
+    setTimeout(() => {
+      if (copied) setCopied(false)
+    }, 5000)
+  }, [copied])
 
   return (
     <Wrapper>
@@ -28,7 +28,7 @@ const App = () => {
         <About isToggled={isToggled} setIsToggled={setIsToggled} />
         <Skills />
         <ProjectList />
-        <Contact />
+        <Contact copied={copied} setCopied={setCopied} />
       </Main>
       <GlobalStyles />
     </Wrapper>
@@ -43,7 +43,7 @@ const Main = styled.main`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 16px 32px;
   gap: 48px;
 `
 
