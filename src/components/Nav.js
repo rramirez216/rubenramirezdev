@@ -45,9 +45,13 @@ const Header = styled.nav`
     display: none;
   }
   @media (min-width: 34.375rem) {
-    & ${Side}:nth-child(3) {
+    /* & ${Side}:nth-child(3) {
+      display: block;
+    } */
+    & ${Side}:nth-child(4) {
       display: block;
     }
+    /* max-width: 720px; */
   }
 `
 
@@ -74,13 +78,18 @@ const CloseButton = styled(X)`
 const Nav = styled.nav`
   display: flex;
   align-self: center;
-  /* margin-left: auto; */
-  /* gap: 48px; */
-  /* margin: 0 48px; */
+  @media (min-width: 34.375rem) {
+    margin-left: auto;
+    gap: 48px;
+    margin: 0 48px;
+  }
 `
 const MenuButton = styled(Menu)`
   width: 32px;
   height: 32px;
+  @media (min-width: 34.375rem) {
+    display: none;
+  }
 `
 const NavLink = styled.a`
   text-decoration: none;
