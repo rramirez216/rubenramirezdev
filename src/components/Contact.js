@@ -7,15 +7,18 @@ const Contact = ({ copied, setCopied }) => {
   return (
     <Wrapper>
       <Heading>Get In Touch</Heading>
-      <CopyToClipboard
-        text='rubenramirez.dev@gmail.com'
-        onCopy={() => setCopied(!copied)}
-      >
-        <Email>
-          {/* <p>RUBENRAMIREZ.DEV@GMAIL.COM</p> */}
-          {copied ? <p>Copied!</p> : <p>rubenramirez.dev@gmail.com</p>}
-        </Email>
-      </CopyToClipboard>
+      {copied ? (
+        <p>Copied!</p>
+      ) : (
+        <CopyToClipboard
+          text='rubenramirez.dev@gmail.com'
+          onCopy={() => setCopied(!copied)}
+        >
+          <Email>
+            <p>rubenramirez.dev@gmail.com</p>
+          </Email>
+        </CopyToClipboard>
+      )}
     </Wrapper>
   )
 }
