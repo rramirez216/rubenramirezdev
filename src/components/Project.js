@@ -24,11 +24,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
   gap: 16px;
+  max-width: 550px;
 `
 const Title = styled.h3`
   font-size: 1.5rem;
   color: hsl(0, 0%, 30%);
-  /* width: 100%; */
 `
 const Stack = styled.div`
   display: flex;
