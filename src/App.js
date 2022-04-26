@@ -38,13 +38,17 @@ const App = () => {
 const Wrapper = styled.div`
   font-size: 1.5rem;
   color: hsl(0, 0%, 25%);
+  display: flex;
+  flex-flow: column;
 `
 const Main = styled.main`
+  align-self: center;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding: 0 16px 32px;
   gap: 64px;
+  max-width: 720px;
 `
 
 export default App
