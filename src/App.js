@@ -40,6 +40,8 @@ const Wrapper = styled.div`
   color: hsl(0, 0%, 25%);
   display: flex;
   flex-flow: column;
+  max-width: 960px;
+  margin: 0 auto;
 `
 const Main = styled.main`
   align-self: center;
