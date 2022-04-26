@@ -24,6 +24,7 @@ const ProjectList = () => {
 }
 
 const Wrapper = styled.div`
+  align-self: flex-start;
   display: flex;
   flex-flow: column;
   gap: 16px;
