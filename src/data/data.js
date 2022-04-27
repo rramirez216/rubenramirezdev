@@ -1,46 +1,35 @@
 const projectsArr = [
   {
     id: 0,
-    title: 'LoL Champions',
-    name: 'title',
+    title: 'Random Champion Picker',
     description:
-      'A League of Legends tool to find out basic information about a champion.',
-    view: {
-      title: 'it works',
-      stack: ['CSS', 'JavaScript', 'ReactJS'],
-      code: '',
-      demo: '',
-      summary:
-        'A web app that lists all playable champions of the popular online multiplayer video game League of Legends. It allows users to filter through the list of champions and find out their lore, abilities, descriptions of abilities, and images.',
-      purpose:
-        'I built this with the intention of gaining experience fetching data, using ReactJS with hooks. I have also long desired to build something using a League of Legends api.',
-      lessons:
-        'I learned to use a conditional statement to check if a prop has data loaded onto it before attempting to display it on the page to avoid it crashing the react app. Another lesson I learned was using localStorage to allow data to persist after a page refresh',
-      showcase: 'I would like to showcase',
-    },
+      'A tool created to help pick a random League of Legends champion for the user to play.',
+    stack: ['CSS', 'Styled Components', 'JavaScript', 'ReactJS'],
+    repo: 'https://github.com/rramirez216/random-champion-picker',
+    demo: 'https://randomchampionpicker.netlify.app/',
   },
   {
     id: 1,
     title: 'SALVAMEX',
     description:
-      'A responsive brochure webpage promoting the services, and showcasing the work provided by the construction company SALVAMEX.',
-    view: {
-      title: 'it works',
-      stack: ['TailwindCSS', 'JavaScript', 'HTML5'],
-      code: '',
-      demo: '',
-      summary:
-        'A single resposive webpage that that gives insight to services provided by SALVAMEX. Here you can find a list of services provided a button to get a free quote from SALVAMEX, an image gallery showcasing roofing and construction work they have done, and a testimonial video. ',
-      purpose: '',
-      lessons: '',
-      showcase: 'I would like to showcase',
-    },
+      'A responsive brochure website promoting the services, and showcasing the work provided by the construction company SALVAMEX.',
+    stack: ['TailwindCSS', 'JavaScript', 'HTML5'],
+    repo: 'https://github.com/rramirez216/Salvamex',
+    demo: 'https://salvamexconstruction.com/',
   },
 ]
 
 // const skills = [' HTML', ' CSS', ' React', ' JavaScript', ' Node.JS', ' MongoDB', ' Express', ' PostgreSQL']
 
-const skills = [' HTML', ' CSS', ' React', ' JavaScript']
+const skills = [
+  'HTML',
+  'CSS',
+  'Tailwind CSS',
+  'Styled Components',
+  'JavaScript',
+  'React',
+  'Git & GitHub',
+]
 
 const aboutParagraphs = [
   `My first coding experience was in Econimics class my senior year of high school. The Economics teacher said, while showing us Codeacademy, " These will be important skills to have in the future." And I continued to self-teach web development on and off for a couple of years, until fully commiting to a coding bootcamp LEARN academy. While there I built a solid foundation of web development fundamentals and obtained a growth mindset.`,

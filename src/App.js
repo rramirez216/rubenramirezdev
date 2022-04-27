@@ -1,16 +1,18 @@
 import { React, useState, useEffect } from 'react'
 import styled from 'styled-components'
+// components
 import GlobalStyles from './components/globalstyles/GlobalStyles'
-import { Switch, Route } from 'react-router-dom'
-import { Navbar } from './components/Navbar'
-import { About } from './components/About'
-import { Projects } from './components/Projects'
-import { Contact } from './components/Contact'
-import { LolChampions } from './pages/LolChampions'
-import { Salvamex } from './pages/Salvamex'
+import Navigation from './components/Nav'
+import Portrait from './components/Portrait'
+import About from './components/About'
+import Skills from './components/Skills'
+import ProjectList from './components/ProjectList'
+import Contact from './components/Contact'
 
 const App = () => {
   const [copied, setCopied] = useState(false)
+  const [isNavOpen, setIsNavOpen] = useState(false)
+  const [isToggled, setIsToggled] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
@@ -20,39 +22,35 @@ const App = () => {
 
   return (
     <Wrapper>
-      <Navbar />
-      <Switch>
-        <Route
-          path='/contact'
-          render={() => <Contact copied={copied} setCopied={setCopied} />}
-        />
-        <Route path='/projects' render={() => <Projects />} />
-        <Route path='/lol-champions' render={() => <LolChampions />} />
-        <Route path='/salvamex' render={() => <Salvamex />} />
-        <Route exact path='/' render={() => <About />} />
-      </Switch>
+      <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+      <Main>
+        <Portrait />
+        <About isToggled={isToggled} setIsToggled={setIsToggled} />
+        <Skills />
+        <ProjectList />
+        <Contact copied={copied} setCopied={setCopied} />
+      </Main>
       <GlobalStyles />
     </Wrapper>
   )
 }
 
-const Wrapper = styled.main`
-  width: 100%;
-  min-height: 100%;
-  background-color: hsl(133, 30%, 41%);
-  padding: 16px 8px;
-  color: hsl(133, 30%, 41%);
+const Wrapper = styled.div`
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 25%);
   display: flex;
   flex-flow: column;
+  max-width: 960px;
+  margin: 0 auto;
+`
+const Main = styled.main`
+  align-self: center;
+  display: flex;
+  flex-flow: column nowrap;
   align-items: center;
-  /* overflow-y: scroll; */
-  font-family: 'Roboto Mono', monospace;
-  @media (min-width: 31.25rem) {
-    padding: 16px;
-  }
-  @media (min-width: 56.25rem) {
-    padding: 32px;
-  }
+  padding: 0 16px 32px;
+  gap: 64px;
+  max-width: 720px;
 `
 
 export default App

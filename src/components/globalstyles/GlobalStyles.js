@@ -1,9 +1,9 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
-  /* Box sizing rules */
+
+/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -41,6 +41,7 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  font-family: 'Lato';
 }
 
 body {
@@ -84,5 +85,5 @@ select {
   }
 }
 
-`;
-export default GlobalStyles;
+`
+export default GlobalStyles
