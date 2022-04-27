@@ -12,13 +12,13 @@ const Portrait = () => {
         <Image src={SelfPortrait} alt='portrait' />
       </ImageWrapper>
       <LinkWrapper>
-        <Link href=''>
+        <Link href='mailto:rubenramirez.dev@gmail.com'>
           <Mail />
         </Link>
-        <Link href=''>
+        <Link href='https://www.linkedin.com/in/rubenramirez95/'>
           <Linkedin />
         </Link>
-        <Link href=''>
+        <Link href='https://github.com/rramirez216'>
           <GitHub />
         </Link>
       </LinkWrapper>

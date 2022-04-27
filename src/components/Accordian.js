@@ -7,7 +7,7 @@ const Accordian = ({ isToggled, setIsToggled }) => {
   return (
     <Wrapper>
       <Button onClick={() => setIsToggled(!isToggled)} isToggled={isToggled}>
-        <p>view more</p>
+        <p>The long version</p>
         {isToggled ? <ChevronUp /> : <ChevronDown />}
       </Button>
       <AnimatePresence>
@@ -54,6 +54,7 @@ const Button = styled.button`
   background-color: hsl(0, 0%, 100%);
   padding: 0;
   margin: 0 0 ${(props) => (props.isToggled ? '24px' : '0')} 0;
+  cursor: pointer;
   & svg {
     width: 32px;
     height: 32px;

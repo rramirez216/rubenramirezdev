@@ -91,9 +91,24 @@ const MenuButton = styled(Menu)`
     display: none;
   }
 `
-const NavLink = styled.a`
+const NavLink = styled(motion.a)`
   text-decoration: none;
   display: none;
+  padding: 4px 16px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 8px;
+  &:hover {
+    border-color: hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 93%);
+  }
+  &:link {
+    /* color: hsl(138, 81%, 29%); */
+    color: hsl(0, 0%, 25%);
+  }
+  &:visited {
+    /* color: hsl(138, 81%, 29%); */
+    color: hsl(0, 0%, 25%);
+  }
   @media (min-width: 34.375rem) {
     display: block;
   }
