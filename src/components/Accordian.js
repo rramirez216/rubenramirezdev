@@ -3,10 +3,15 @@ import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, ChevronUp } from 'react-feather'
 
-const Accordian = ({ isToggled, setIsToggled }) => {
+const Accordian = ({ isToggled, setIsToggled, hoverVariant }) => {
   return (
     <Wrapper>
-      <Button onClick={() => setIsToggled(!isToggled)} isToggled={isToggled}>
+      <Button
+        onClick={() => setIsToggled(!isToggled)}
+        isToggled={isToggled}
+        variants={hoverVariant}
+        whileHover={hoverVariant.hover}
+      >
         <p>The long version</p>
         {isToggled ? <ChevronUp /> : <ChevronDown />}
       </Button>
@@ -47,7 +52,7 @@ const Accordian = ({ isToggled, setIsToggled }) => {
 const Wrapper = styled.div`
   width: 100%;
 `
-const Button = styled.button`
+const Button = styled(motion.button)`
   display: flex;
   align-items: center;
   border: none;
@@ -60,6 +65,14 @@ const Button = styled.button`
     height: 32px;
     color: hsl(0, 0%, 25%);
     margin-bottom: -5px;
+  }
+
+  &:hover {
+    color: hsl(138, 81%, 29%);
+  }
+
+  &:hover svg {
+    color: hsl(138, 81%, 29%);
   }
 `
 export default Accordian

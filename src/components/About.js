@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Accordian from './Accordian'
 
-const About = ({ isToggled, setIsToggled }) => {
+const About = ({ isToggled, setIsToggled, hoverVariant }) => {
   return (
     <Wrapper>
       <Heading>About</Heading>
@@ -11,7 +11,11 @@ const About = ({ isToggled, setIsToggled }) => {
         based in San Diego, CA. I have a passion for learning new things,
         solving problems, and bringing joy to others through code.
       </Paragraph>
-      <Accordian isToggled={isToggled} setIsToggled={setIsToggled} />
+      <Accordian
+        isToggled={isToggled}
+        setIsToggled={setIsToggled}
+        hoverVariant={hoverVariant}
+      />
     </Wrapper>
   )
 }

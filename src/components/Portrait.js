@@ -1,24 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import { motion } from 'framer-motion'
 // SVG Icons
 import { Linkedin, GitHub, Mail } from 'react-feather'
 // image
 import SelfPortrait from '../Assets/images/portrait.JPG'
 
-const Portrait = () => {
+const Portrait = ({ hoverVariant }) => {
   return (
     <Wrapper>
       <ImageWrapper>
         <Image src={SelfPortrait} alt='portrait' />
       </ImageWrapper>
       <LinkWrapper>
-        <Link href='mailto:rubenramirez.dev@gmail.com'>
+        <Link
+          href='mailto:rubenramirez.dev@gmail.com'
+          variants={hoverVariant}
+          whileHover={hoverVariant.hover}
+        >
           <Mail />
         </Link>
-        <Link href='https://www.linkedin.com/in/rubenramirez95/'>
+        <Link
+          href='https://www.linkedin.com/in/rubenramirez95/'
+          variants={hoverVariant}
+          whileHover={hoverVariant.hover}
+        >
           <Linkedin />
         </Link>
-        <Link href='https://github.com/rramirez216'>
+        <Link
+          href='https://github.com/rramirez216'
+          variants={hoverVariant}
+          whileHover={hoverVariant.hover}
+        >
           <GitHub />
         </Link>
       </LinkWrapper>
@@ -45,7 +59,7 @@ const LinkWrapper = styled.div`
   display: flex;
   gap: 24px;
 `
-const Link = styled.a`
+const Link = styled(motion.a)`
   display: block;
   &:link {
     /* color: hsl(138, 81%, 29%); */
@@ -54,6 +68,9 @@ const Link = styled.a`
   &:visited {
     /* color: hsl(138, 81%, 29%); */
     color: hsl(0, 0%, 25%);
+  }
+  &:hover svg {
+    color: hsl(138, 81%, 29%);
   }
 
   & svg {

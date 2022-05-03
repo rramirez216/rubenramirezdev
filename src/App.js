@@ -14,6 +14,13 @@ const App = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [isToggled, setIsToggled] = useState(false)
 
+  const hoverVariant = {
+    hover: {
+      scale: 1.2,
+      transition: { type: 'spring', damping: 10, stiffness: 700 },
+    },
+  }
+
   useEffect(() => {
     setTimeout(() => {
       if (copied) setCopied(false)
@@ -24,8 +31,12 @@ const App = () => {
     <Wrapper>
       <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <Main>
-        <Portrait />
-        <About isToggled={isToggled} setIsToggled={setIsToggled} />
+        <Portrait hoverVariant={hoverVariant} />
+        <About
+          isToggled={isToggled}
+          setIsToggled={setIsToggled}
+          hoverVariant={hoverVariant}
+        />
         <Skills />
         <ProjectList />
         <Contact copied={copied} setCopied={setCopied} />
