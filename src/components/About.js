@@ -4,7 +4,7 @@ import Accordian from './Accordian'
 
 const About = ({ isToggled, setIsToggled, hoverVariant }) => {
   return (
-    <Wrapper>
+    <Wrapper id='about'>
       <Heading>About</Heading>
       <Paragraph>
         Hi there! I'm Ruben Ramirez, a self-motivated Frontend Web Developer
