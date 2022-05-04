@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-const Contact = ({ copied, setCopied }) => {
+const Contact = ({ copied, setCopied, hoverVariant }) => {
   return (
-    <Wrapper>
+    <Wrapper id='contact'>
       <Heading>Get In Touch</Heading>
       {copied ? (
         <p>Copied!</p>
@@ -14,7 +14,7 @@ const Contact = ({ copied, setCopied }) => {
           text='rubenramirez.dev@gmail.com'
           onCopy={() => setCopied(!copied)}
         >
-          <Email>
+          <Email variants={hoverVariant} whileHover={hoverVariant.hover}>
             <p>rubenramirez.dev@gmail.com</p>
           </Email>
         </CopyToClipboard>
@@ -36,5 +36,8 @@ const Heading = styled.h2`
 `
 const Email = styled(motion.div)`
   cursor: pointer;
+  &:hover {
+    color: hsl(138, 81%, 29%);
+  }
 `
 export default Contact
