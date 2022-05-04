@@ -2,14 +2,29 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-const Project = ({ title, description, stack, repo, demo }) => {
+const Project = ({ title, description, stack, repo, demo, hoverVariant }) => {
+  hoverVariant.hover.damping = 30
+  hoverVariant.hover.scale = 1.1
+
   return (
     <Wrapper>
       <Title>{title} -</Title>
       <p>{description}</p>
       <LinkWrapper>
-        <Link href={repo}>View Repo</Link>
-        <Link href={demo}>Live Demo</Link>
+        <Link
+          href={repo}
+          variants={hoverVariant}
+          whileHover={hoverVariant.hover}
+        >
+          View Repo
+        </Link>
+        <Link
+          href={demo}
+          variants={hoverVariant}
+          whileHover={hoverVariant.hover}
+        >
+          Live Demo
+        </Link>
       </LinkWrapper>
       <Stack>
         {stack.map((skill, index) => (
@@ -43,7 +58,7 @@ const Skill = styled.div`
 `
 const LinkWrapper = styled.div`
   display: flex;
-  gap: 16px;
+  gap: 32px;
 `
 const Link = styled(motion.a)`
   display: block;
@@ -52,6 +67,10 @@ const Link = styled(motion.a)`
     color: hsl(0, 0%, 25%);
     text-decoration: none;
     cursor: pointer;
+  }
+  &:hover {
+    color: hsl(138, 81%, 29%);
+    text-decoration: underline;
   }
 `
 export default Project
