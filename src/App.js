@@ -17,9 +17,12 @@ const App = () => {
   const hoverVariant = {
     hover: {
       scale: 1.2,
+      originX: 0,
       transition: { type: 'spring', damping: 10, stiffness: 700 },
     },
   }
+
+  console.log(hoverVariant.hover)
 
   useEffect(() => {
     setTimeout(() => {
@@ -38,8 +41,12 @@ const App = () => {
           hoverVariant={hoverVariant}
         />
         <Skills />
-        <ProjectList />
-        <Contact copied={copied} setCopied={setCopied} />
+        <ProjectList hoverVariant={hoverVariant} />
+        <Contact
+          copied={copied}
+          setCopied={setCopied}
+          hoverVariant={hoverVariant}
+        />
       </Main>
       <GlobalStyles />
     </Wrapper>
