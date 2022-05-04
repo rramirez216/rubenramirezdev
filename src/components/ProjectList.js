@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import Project from './Project'
 import { projectsArr } from '../data/data'
 
-const ProjectList = () => {
+const ProjectList = ({ hoverVariant }) => {
   return (
-    <Wrapper>
+    <Wrapper id='projects'>
       <Heading>Projects</Heading>
       <ListWrapper>
         {projectsArr.map((project) => (
@@ -16,6 +16,7 @@ const ProjectList = () => {
             repo={project.repo}
             demo={project.demo}
             key={project.id}
+            hoverVariant={hoverVariant}
           />
         ))}
       </ListWrapper>
