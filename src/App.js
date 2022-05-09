@@ -66,7 +66,7 @@ const Main = styled.main`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding: 0 16px 32px;
+  padding: 0 16px 96px;
   gap: 64px;
   max-width: 720px;
 `
