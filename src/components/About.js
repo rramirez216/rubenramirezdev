@@ -8,9 +8,9 @@ const About = ({ isToggled, setIsToggled, hoverVariant }) => {
       <Heading>About</Heading>
       <Paragraph>
         Hi there! I'm Ruben Ramirez, a self-motivated{' '}
-        <strong>Frontend Web Developer</strong> currently based in Upland, CA. I
-        have a passion for learning new things, solving problems, and bringing
-        joy to others through code using{' '}
+        <strong>Front-End Software Developer</strong> currently based in Upland,
+        CA. I have a passion for learning new things, solving problems, and
+        bringing joy to others through code using{' '}
         <strong>JavaScript, ReactJS, and CSS</strong>.
       </Paragraph>
       <Accordian
