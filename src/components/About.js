@@ -7,9 +7,11 @@ const About = ({ isToggled, setIsToggled, hoverVariant }) => {
     <Wrapper id='about'>
       <Heading>About</Heading>
       <Paragraph>
-        Hi there! I'm Ruben Ramirez, a self-motivated Frontend Web Developer
-        based in San Diego, CA. I have a passion for learning new things,
-        solving problems, and bringing joy to others through code.
+        Hi there! I'm Ruben Ramirez, a self-motivated{' '}
+        <strong>Frontend Web Developer</strong> currently based in Upland, CA. I
+        have a passion for learning new things, solving problems, and bringing
+        joy to others through code using{' '}
+        <strong>JavaScript, ReactJS, and CSS</strong>.
       </Paragraph>
       <Accordian
         isToggled={isToggled}
