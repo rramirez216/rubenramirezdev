@@ -12,7 +12,7 @@ const Accordian = ({ isToggled, setIsToggled, hoverVariant }) => {
         variants={hoverVariant}
         whileHover={hoverVariant.hover}
       >
-        <p>The long version</p>
+        The long version
         {isToggled ? <ChevronUp /> : <ChevronDown />}
       </Button>
       <AnimatePresence>
@@ -24,7 +24,7 @@ const Accordian = ({ isToggled, setIsToggled, hoverVariant }) => {
             exit={{ opacity: 0, height: 0 }}
           >
             <p>
-              My first coding experience was in Econimics class my senior year
+              My first coding experience was in Economics class my senior year
               of high school. The Economics teacher said, while showing us
               Codeacademy, " These will be important skills to have in the
               future." And I continued to self-teach web development on and off
@@ -32,11 +32,13 @@ const Accordian = ({ isToggled, setIsToggled, hoverVariant }) => {
               LEARN academy. While there I built a solid foundation of web
               development fundamentals and obtained a growth mindset.
             </p>
+            <br />
             <p>
               I am now seeking opportunities where I can help a company achieve
               their goals, while also improving my skills and knowledge as a
               developer.
             </p>
+            <br />
             <p>
               Lastly, when not coding I enjoy immersing myself in video games,
               swimming, visiting the beach, and exploring new creative
