@@ -53,6 +53,10 @@ const ImageWrapper = styled.div`
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
+  @media (min-width: 37.375rem) {
+    width: 250px;
+    height: 250px;
+  }
 `
 const Image = styled.img``
 const LinkWrapper = styled.div`
@@ -62,11 +66,9 @@ const LinkWrapper = styled.div`
 const Link = styled(motion.a)`
   display: block;
   &:link {
-    /* color: hsl(138, 81%, 29%); */
     color: hsl(0, 0%, 25%);
   }
   &:visited {
-    /* color: hsl(138, 81%, 29%); */
     color: hsl(0, 0%, 25%);
   }
   &:hover svg {
