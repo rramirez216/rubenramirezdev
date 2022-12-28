@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'react-feather'
 
-const Navigation = ({ isNavOpen, setIsNavOpen }) => {
+const Navigation = ({ isNavOpen, setIsNavOpen, hoverVariant }) => {
   const variants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 1, x: '-100%' },
@@ -14,9 +14,27 @@ const Navigation = ({ isNavOpen, setIsNavOpen }) => {
         <Logo>Ruben Ramirez</Logo>
       </Side>
       <Nav>
-        <NavLink href='#about'>About</NavLink>
-        <NavLink href='#projects'>Projects</NavLink>
-        <NavLink href='#contact'>Contact</NavLink>
+        <NavLink
+          href='#about'
+          variants={hoverVariant}
+          whileHover={hoverVariant.hover}
+        >
+          About
+        </NavLink>
+        <NavLink
+          href='#projects'
+          variants={hoverVariant}
+          whileHover={hoverVariant.hover}
+        >
+          Projects
+        </NavLink>
+        <NavLink
+          href='#contact'
+          variants={hoverVariant}
+          whileHover={hoverVariant.hover}
+        >
+          Contact
+        </NavLink>
         <MenuButton onClick={() => setIsNavOpen(true)} />
       </Nav>
       <MobileNav
@@ -50,6 +68,7 @@ const Header = styled.nav`
   align-items: baseline;
   justify-content: space-between;
   padding: 0 16px;
+  margin-top: 16px;
   & ${Side}:nth-child(4) {
     display: none;
   }
@@ -57,6 +76,7 @@ const Header = styled.nav`
     & ${Side}:nth-child(4) {
       display: block;
     }
+    margin-top: 32px;
   }
 `
 
@@ -122,17 +142,15 @@ const NavLink = styled(motion.a)`
   padding: 4px 16px;
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 8px;
-  &:hover {
-    border-color: hsl(0, 0%, 80%);
-    background-color: hsl(0, 0%, 93%);
-  }
-  &:link {
-    /* color: hsl(138, 81%, 29%); */
-    color: hsl(0, 0%, 25%);
-  }
+  &:link,
   &:visited {
-    /* color: hsl(138, 81%, 29%); */
     color: hsl(0, 0%, 25%);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &:hover {
+    color: hsl(138, 81%, 29%);
+    text-decoration: underline;
   }
   @media (min-width: 37.375rem) {
     display: block;
