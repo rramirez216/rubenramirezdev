@@ -32,7 +32,11 @@ const App = () => {
 
   return (
     <Wrapper>
-      <Navigation isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
+      <Navigation
+        isNavOpen={isNavOpen}
+        setIsNavOpen={setIsNavOpen}
+        hoverVariant={hoverVariant}
+      />
       <Main>
         <Portrait hoverVariant={hoverVariant} />
         <About
