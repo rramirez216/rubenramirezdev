@@ -15,6 +15,7 @@ const Project = ({ title, description, stack, repo, demo, hoverVariant }) => {
           href={repo}
           variants={hoverVariant}
           whileHover={hoverVariant.hover}
+          target='_blank'
         >
           View Repo
         </Link>
@@ -22,6 +23,7 @@ const Project = ({ title, description, stack, repo, demo, hoverVariant }) => {
           href={demo}
           variants={hoverVariant}
           whileHover={hoverVariant.hover}
+          target='_blank'
         >
           Live Demo
         </Link>
