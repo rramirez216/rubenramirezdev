@@ -18,6 +18,7 @@ const Portrait = ({ hoverVariant }) => {
           href='mailto:rubenramirez.dev@gmail.com'
           variants={hoverVariant}
           whileHover={hoverVariant.hover}
+          target='_blank'
         >
           <Mail />
         </Link>
@@ -25,6 +26,7 @@ const Portrait = ({ hoverVariant }) => {
           href='https://www.linkedin.com/in/rubenramirez95/'
           variants={hoverVariant}
           whileHover={hoverVariant.hover}
+          target='_blank'
         >
           <Linkedin />
         </Link>
@@ -32,6 +34,7 @@ const Portrait = ({ hoverVariant }) => {
           href='https://github.com/rramirez216'
           variants={hoverVariant}
           whileHover={hoverVariant.hover}
+          target='_blank'
         >
           <GitHub />
         </Link>
