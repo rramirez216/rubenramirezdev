@@ -1,7 +1,7 @@
 const projectsArr = [
   {
     id: 0,
-    title: 'Random Champion Picker',
+    title: 'Random Roster',
     description:
       'A tool created to help pick a random League of Legends champion for the user to play.',
     stack: ['CSS', 'styled-components', 'JavaScript', 'ReactJS'],
@@ -19,7 +19,7 @@ const projectsArr = [
   // },
   {
     id: 2,
-    title: 'Champion Search',
+    title: 'Champion Compendium',
     description:
       'An app built to provide the user the ability to search through League of Legends roster of champions and and find out their lore, roles, and what skins they have available.',
     stack: ['ReactJS', 'JavaScript', 'CSS', 'styled-components'],
