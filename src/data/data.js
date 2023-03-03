@@ -5,8 +5,8 @@ const projectsArr = [
     description:
       'A tool created to help pick a random League of Legends champion for the user to play.',
     stack: ['CSS', 'styled-components', 'JavaScript', 'ReactJS'],
-    repo: 'https://github.com/rramirez216/random-champion-picker',
-    demo: 'https://randomchampionpicker.netlify.app/',
+    repo: 'https://github.com/rramirez216/RandomRoster',
+    demo: 'https://randomroster.netlify.app/',
   },
   // {
   //   id: 1,
@@ -23,8 +23,8 @@ const projectsArr = [
     description:
       'An app built to provide the user the ability to search through League of Legends roster of champions and and find out their lore, roles, and what skins they have available.',
     stack: ['ReactJS', 'JavaScript', 'CSS', 'styled-components'],
-    repo: 'https://github.com/rramirez216/champion-search/tree/main/champion-search',
-    demo: 'https://champion-search.netlify.app',
+    repo: 'https://github.com/rramirez216/ChampionCompendium',
+    demo: 'https://champion-compendium.netlify.app/',
   },
 ]
 
